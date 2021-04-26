@@ -1,0 +1,53 @@
+[{
+    "name" : "Tabata 1",
+    "times" : [{
+                    "Hours" : 0,
+                    "Minutes" : 0,
+                    "Seconds" : 1,
+                    "id" : 0
+                },
+                {
+                    "Hours" : 0,
+                    "Minutes" : 0,
+                    "Seconds" : 1,
+                    "id" : 1
+                },
+                {
+                    "Hours" : 0,
+                    "Minutes" : 0,
+                    "Seconds" : 1,
+                    "id" : 2
+                },
+                {
+                    "Hours" : 0,
+                    "Minutes" : 0,
+                    "Seconds" : 1,
+                    "id" : 3
+                }]
+},{
+    "name" : "Tabata 2",
+    "times" : [{
+                    "Hours" : 0,
+                    "Minutes" : 0,
+                    "Seconds" : 2,
+                    "id" : 4
+                },
+                {
+                    "Hours" : 0,
+                    "Minutes" : 0,
+                    "Seconds" : 1,
+                    "id" : 5
+                },
+                {
+                    "Hours" : 0,
+                    "Minutes" : 0,
+                    "Seconds" : 4,
+                    "id" : 6
+                },
+                {
+                    "Hours" : 0,
+                    "Minutes" : 0,
+                    "Seconds" : 1,
+                    "id" : 7
+                }]
+}]
