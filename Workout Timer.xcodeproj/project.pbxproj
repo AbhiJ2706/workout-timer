@@ -1,0 +1,727 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C26F64BD263325DC00C786DD /* TimerBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F64BC263325DC00C786DD /* TimerBuild.swift */; };
+		C26F64BE263325DC00C786DD /* TimerBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F64BC263325DC00C786DD /* TimerBuild.swift */; };
+		C26F64D026338A2600C786DD /* TimeCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F64CF26338A2600C786DD /* TimeCreate.swift */; };
+		C26F64D126338A2600C786DD /* TimeCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F64CF26338A2600C786DD /* TimeCreate.swift */; };
+		C26F64D7263476D200C786DD /* preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C26F64D6263476D200C786DD /* preview.mp3 */; };
+		C26F64D8263476D200C786DD /* preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C26F64D6263476D200C786DD /* preview.mp3 */; };
+		C26F64DE2634BFEB00C786DD /* RunTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F64DD2634BFEB00C786DD /* RunTime.swift */; };
+		C26F64DF2634BFEB00C786DD /* RunTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F64DD2634BFEB00C786DD /* RunTime.swift */; };
+		C26F64E526370D9200C786DD /* LoadTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F64E426370D9200C786DD /* LoadTimer.swift */; };
+		C26F64E626370D9200C786DD /* LoadTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F64E426370D9200C786DD /* LoadTimer.swift */; };
+		C26F64ED26370EB400C786DD /* timers.json in Resources */ = {isa = PBXBuildFile; fileRef = C26F64EC26370EB400C786DD /* timers.json */; };
+		C26F64EE26370EB400C786DD /* timers.json in Resources */ = {isa = PBXBuildFile; fileRef = C26F64EC26370EB400C786DD /* timers.json */; };
+		C2B4DBA4263311D100195B18 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B4DBA3263311D100195B18 /* Tests_iOS.swift */; };
+		C2B4DBAF263311D100195B18 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B4DBAE263311D100195B18 /* Tests_macOS.swift */; };
+		C2B4DBB1263311D100195B18 /* Workout_TimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B4DB88263311D000195B18 /* Workout_TimerApp.swift */; };
+		C2B4DBB2263311D100195B18 /* Workout_TimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B4DB88263311D000195B18 /* Workout_TimerApp.swift */; };
+		C2B4DBB3263311D100195B18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B4DB89263311D000195B18 /* ContentView.swift */; };
+		C2B4DBB4263311D100195B18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B4DB89263311D000195B18 /* ContentView.swift */; };
+		C2B4DBB5263311D100195B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2B4DB8A263311D100195B18 /* Assets.xcassets */; };
+		C2B4DBB6263311D100195B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2B4DB8A263311D100195B18 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2B4DBA0263311D100195B18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2B4DB83263311D000195B18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2B4DB8E263311D100195B18;
+			remoteInfo = "Workout Timer (iOS)";
+		};
+		C2B4DBAB263311D100195B18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2B4DB83263311D000195B18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2B4DB96263311D100195B18;
+			remoteInfo = "Workout Timer (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C26F64BC263325DC00C786DD /* TimerBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBuild.swift; sourceTree = "<group>"; };
+		C26F64CF26338A2600C786DD /* TimeCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCreate.swift; sourceTree = "<group>"; };
+		C26F64D6263476D200C786DD /* preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = preview.mp3; sourceTree = "<group>"; };
+		C26F64DD2634BFEB00C786DD /* RunTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTime.swift; sourceTree = "<group>"; };
+		C26F64E426370D9200C786DD /* LoadTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadTimer.swift; sourceTree = "<group>"; };
+		C26F64EC26370EB400C786DD /* timers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timers.json; sourceTree = "<group>"; };
+		C2B4DB88263311D000195B18 /* Workout_TimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout_TimerApp.swift; sourceTree = "<group>"; };
+		C2B4DB89263311D000195B18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C2B4DB8A263311D100195B18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2B4DB8F263311D100195B18 /* Workout Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workout Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B4DB92263311D100195B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2B4DB97263311D100195B18 /* Workout Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workout Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B4DB99263311D100195B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2B4DB9A263311D100195B18 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C2B4DB9F263311D100195B18 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B4DBA3263311D100195B18 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		C2B4DBA5263311D100195B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2B4DBAA263311D100195B18 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B4DBAE263311D100195B18 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		C2B4DBB0263311D100195B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2B4DB8C263311D100195B18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B4DB94263311D100195B18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B4DB9C263311D100195B18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B4DBA7263311D100195B18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2B4DB82263311D000195B18 = {
+			isa = PBXGroup;
+			children = (
+				C26F64CF26338A2600C786DD /* TimeCreate.swift */,
+				C26F64EC26370EB400C786DD /* timers.json */,
+				C26F64D6263476D200C786DD /* preview.mp3 */,
+				C2B4DB87263311D000195B18 /* Shared */,
+				C2B4DB91263311D100195B18 /* iOS */,
+				C2B4DB98263311D100195B18 /* macOS */,
+				C2B4DBA2263311D100195B18 /* Tests iOS */,
+				C2B4DBAD263311D100195B18 /* Tests macOS */,
+				C2B4DB90263311D100195B18 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2B4DB87263311D000195B18 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C2B4DB88263311D000195B18 /* Workout_TimerApp.swift */,
+				C2B4DB89263311D000195B18 /* ContentView.swift */,
+				C26F64BC263325DC00C786DD /* TimerBuild.swift */,
+				C26F64E426370D9200C786DD /* LoadTimer.swift */,
+				C26F64DD2634BFEB00C786DD /* RunTime.swift */,
+				C2B4DB8A263311D100195B18 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C2B4DB90263311D100195B18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2B4DB8F263311D100195B18 /* Workout Timer.app */,
+				C2B4DB97263311D100195B18 /* Workout Timer.app */,
+				C2B4DB9F263311D100195B18 /* Tests iOS.xctest */,
+				C2B4DBAA263311D100195B18 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2B4DB91263311D100195B18 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C2B4DB92263311D100195B18 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		C2B4DB98263311D100195B18 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C2B4DB99263311D100195B18 /* Info.plist */,
+				C2B4DB9A263311D100195B18 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		C2B4DBA2263311D100195B18 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C2B4DBA3263311D100195B18 /* Tests_iOS.swift */,
+				C2B4DBA5263311D100195B18 /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		C2B4DBAD263311D100195B18 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C2B4DBAE263311D100195B18 /* Tests_macOS.swift */,
+				C2B4DBB0263311D100195B18 /* Info.plist */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2B4DB8E263311D100195B18 /* Workout Timer (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2B4DBB9263311D100195B18 /* Build configuration list for PBXNativeTarget "Workout Timer (iOS)" */;
+			buildPhases = (
+				C2B4DB8B263311D100195B18 /* Sources */,
+				C2B4DB8C263311D100195B18 /* Frameworks */,
+				C2B4DB8D263311D100195B18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Workout Timer (iOS)";
+			productName = "Workout Timer (iOS)";
+			productReference = C2B4DB8F263311D100195B18 /* Workout Timer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2B4DB96263311D100195B18 /* Workout Timer (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2B4DBBC263311D100195B18 /* Build configuration list for PBXNativeTarget "Workout Timer (macOS)" */;
+			buildPhases = (
+				C2B4DB93263311D100195B18 /* Sources */,
+				C2B4DB94263311D100195B18 /* Frameworks */,
+				C2B4DB95263311D100195B18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Workout Timer (macOS)";
+			productName = "Workout Timer (macOS)";
+			productReference = C2B4DB97263311D100195B18 /* Workout Timer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2B4DB9E263311D100195B18 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2B4DBBF263311D100195B18 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				C2B4DB9B263311D100195B18 /* Sources */,
+				C2B4DB9C263311D100195B18 /* Frameworks */,
+				C2B4DB9D263311D100195B18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2B4DBA1263311D100195B18 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = C2B4DB9F263311D100195B18 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C2B4DBA9263311D100195B18 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2B4DBC2263311D100195B18 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				C2B4DBA6263311D100195B18 /* Sources */,
+				C2B4DBA7263311D100195B18 /* Frameworks */,
+				C2B4DBA8263311D100195B18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2B4DBAC263311D100195B18 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = C2B4DBAA263311D100195B18 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2B4DB83263311D000195B18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					C2B4DB8E263311D100195B18 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					C2B4DB96263311D100195B18 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					C2B4DB9E263311D100195B18 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = C2B4DB8E263311D100195B18;
+					};
+					C2B4DBA9263311D100195B18 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = C2B4DB96263311D100195B18;
+					};
+				};
+			};
+			buildConfigurationList = C2B4DB86263311D000195B18 /* Build configuration list for PBXProject "Workout Timer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2B4DB82263311D000195B18;
+			productRefGroup = C2B4DB90263311D100195B18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2B4DB8E263311D100195B18 /* Workout Timer (iOS) */,
+				C2B4DB96263311D100195B18 /* Workout Timer (macOS) */,
+				C2B4DB9E263311D100195B18 /* Tests iOS */,
+				C2B4DBA9263311D100195B18 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2B4DB8D263311D100195B18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26F64ED26370EB400C786DD /* timers.json in Resources */,
+				C2B4DBB5263311D100195B18 /* Assets.xcassets in Resources */,
+				C26F64D7263476D200C786DD /* preview.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B4DB95263311D100195B18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26F64EE26370EB400C786DD /* timers.json in Resources */,
+				C2B4DBB6263311D100195B18 /* Assets.xcassets in Resources */,
+				C26F64D8263476D200C786DD /* preview.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B4DB9D263311D100195B18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B4DBA8263311D100195B18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2B4DB8B263311D100195B18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B4DBB3263311D100195B18 /* ContentView.swift in Sources */,
+				C2B4DBB1263311D100195B18 /* Workout_TimerApp.swift in Sources */,
+				C26F64D026338A2600C786DD /* TimeCreate.swift in Sources */,
+				C26F64DE2634BFEB00C786DD /* RunTime.swift in Sources */,
+				C26F64BD263325DC00C786DD /* TimerBuild.swift in Sources */,
+				C26F64E526370D9200C786DD /* LoadTimer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B4DB93263311D100195B18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B4DBB4263311D100195B18 /* ContentView.swift in Sources */,
+				C2B4DBB2263311D100195B18 /* Workout_TimerApp.swift in Sources */,
+				C26F64D126338A2600C786DD /* TimeCreate.swift in Sources */,
+				C26F64DF2634BFEB00C786DD /* RunTime.swift in Sources */,
+				C26F64BE263325DC00C786DD /* TimerBuild.swift in Sources */,
+				C26F64E626370D9200C786DD /* LoadTimer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B4DB9B263311D100195B18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B4DBA4263311D100195B18 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B4DBA6263311D100195B18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B4DBAF263311D100195B18 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2B4DBA1263311D100195B18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2B4DB8E263311D100195B18 /* Workout Timer (iOS) */;
+			targetProxy = C2B4DBA0263311D100195B18 /* PBXContainerItemProxy */;
+		};
+		C2B4DBAC263311D100195B18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2B4DB96263311D100195B18 /* Workout Timer (macOS) */;
+			targetProxy = C2B4DBAB263311D100195B18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C2B4DBB7263311D100195B18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C2B4DBB8263311D100195B18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C2B4DBBA263311D100195B18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Abhi-Jain.Workout-Timer";
+				PRODUCT_NAME = "Workout Timer";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2B4DBBB263311D100195B18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Abhi-Jain.Workout-Timer";
+				PRODUCT_NAME = "Workout Timer";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2B4DBBD263311D100195B18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Abhi-Jain.Workout-Timer";
+				PRODUCT_NAME = "Workout Timer";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C2B4DBBE263311D100195B18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Abhi-Jain.Workout-Timer";
+				PRODUCT_NAME = "Workout Timer";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C2B4DBC0263311D100195B18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Abhi-Jain.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Workout Timer (iOS)";
+			};
+			name = Debug;
+		};
+		C2B4DBC1263311D100195B18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Abhi-Jain.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Workout Timer (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2B4DBC3263311D100195B18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Abhi-Jain.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Workout Timer (macOS)";
+			};
+			name = Debug;
+		};
+		C2B4DBC4263311D100195B18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Abhi-Jain.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Workout Timer (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2B4DB86263311D000195B18 /* Build configuration list for PBXProject "Workout Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2B4DBB7263311D100195B18 /* Debug */,
+				C2B4DBB8263311D100195B18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2B4DBB9263311D100195B18 /* Build configuration list for PBXNativeTarget "Workout Timer (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2B4DBBA263311D100195B18 /* Debug */,
+				C2B4DBBB263311D100195B18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2B4DBBC263311D100195B18 /* Build configuration list for PBXNativeTarget "Workout Timer (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2B4DBBD263311D100195B18 /* Debug */,
+				C2B4DBBE263311D100195B18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2B4DBBF263311D100195B18 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2B4DBC0263311D100195B18 /* Debug */,
+				C2B4DBC1263311D100195B18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2B4DBC2263311D100195B18 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2B4DBC3263311D100195B18 /* Debug */,
+				C2B4DBC4263311D100195B18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2B4DB83263311D000195B18 /* Project object */;
+}
