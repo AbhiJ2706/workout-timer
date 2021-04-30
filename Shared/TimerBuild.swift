@@ -78,21 +78,8 @@ struct TimerBuild: View {
                 }
                 Button("brrrrrrr") {
                     do {
-                        // Convert object to JSON as NSData
-                        let jsonEncoder = JSONEncoder()
-                        let jsonData = try jsonEncoder.encode(time)
-                        let json = String(data: jsonData, encoding: String.Encoding.utf8)?.data(using: String.Encoding.utf8)!
-                        print("JSON string: \(json!)")
-                        //let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-                        //print(dURL)
-                        let directoryURL = URL(string: "file:///Users/abhijain/Documents/GitHub/workout-timer")
-                        let fileURL = URL(fileURLWithPath: "timers", relativeTo: directoryURL).appendingPathExtension("json")
-                        do {
-                            try json!.write(to: fileURL)
-                            print("File saved: \(fileURL.absoluteURL)")
-                        } catch {
-                            print(error.localizedDescription)
-                        }
+                        let x : [TimeStore] = [time]
+                        save(filename : "timers.json", t : x)
                         
                     } catch {
                         print("error writing JSON: \(error)")

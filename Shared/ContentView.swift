@@ -8,12 +8,13 @@
 import SwiftUI
 import Foundation
 
+
 struct ContentView: View {
     @State var Hours : String = ""
     @State var Minutes : String = ""
     @State var Seconds : String = ""
     @State var GoToTime : Bool = false;
-    @State var allTimers : [TimeStore] = load("timers.json")
+    //@State var allTimers : [TimeStore] = load("timers.json")
     
     var body: some View {
         NavigationView {
@@ -29,7 +30,7 @@ struct ContentView: View {
                             Image(systemName: "plus")
                         }).padding()
                 }
-                List(allTimers) { ts in
+                /*List(allTimers) { ts in
                     NavigationLink(destination: RunTime(allTimes: ts)) {
                         HStack {
                             Text(ts.name).padding()
@@ -37,11 +38,10 @@ struct ContentView: View {
                             Text("run")
                         }
                     }.padding()
-                }
-                Button("brrrr") {
-                    print(allTimers)
-                    print(allTimers[0].times)
-                    print(allTimers[1].times)
+                }*/
+                Button("reload") {
+                    //allTimers = load("timers.json")
+                    load(TimeStore(), filename: "timers.json")
                 }
                 Spacer()
             }
