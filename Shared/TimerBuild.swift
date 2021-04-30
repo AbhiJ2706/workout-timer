@@ -45,7 +45,8 @@ struct TimerBuild: View {
     
     @State var id : Int = 0
     @State var Items : [Times] = []
-    @State var GoToTime : Bool = false;
+    @State var GoToTime : Bool = false
+    @State var alltimers : [TimeStore]
     
     func submit() -> Void {
         let t : Times = Times(Hours : Hours.amt, Minutes : Minutes.amt, Seconds : Seconds.amt, id : id)
@@ -64,7 +65,7 @@ struct TimerBuild: View {
                     .keyboardType(.decimalPad)
                 TextField("Seconds", text : $Seconds.value)
                     .keyboardType(.decimalPad)
-                Button("add") {
+                Button("Add") {
                     submit()
                 }
                 NavigationLink(
@@ -73,17 +74,9 @@ struct TimerBuild: View {
                     label: {
                         Text("run")
                     })
-                Button("save") {
-                    submit()
-                }
-                Button("brrrrrrr") {
-                    do {
-                        let x : [TimeStore] = [time]
-                        save(filename : "timers.json", t : x)
-                        
-                    } catch {
-                        print("error writing JSON: \(error)")
-                    }
+                Button("Save") {
+                    alltimers.append(time)
+                    save(filename : "timers.json", t : alltimers)
                 }
                 Spacer()
                 List(Items, id : \.id) { Times in
@@ -97,6 +90,6 @@ struct TimerBuild: View {
 
 struct TimerBuild_Previews: PreviewProvider {
     static var previews: some View {
-        TimerBuild()
+        TimerBuild(alltimers: [])
     }
 }

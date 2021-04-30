@@ -14,7 +14,7 @@ struct ContentView: View {
     @State var Minutes : String = ""
     @State var Seconds : String = ""
     @State var GoToTime : Bool = false;
-    //@State var allTimers : [TimeStore] = load("timers.json")
+    @State var allTimers = load(filename: "timers.json")
     
     var body: some View {
         NavigationView {
@@ -24,13 +24,13 @@ struct ContentView: View {
                         .padding()
                     Spacer()
                     NavigationLink(
-                        destination: TimerBuild(),
+                        destination: TimerBuild(alltimers : allTimers),
                         isActive: $GoToTime,
                         label: {
                             Image(systemName: "plus")
                         }).padding()
                 }
-                /*List(allTimers) { ts in
+                List(allTimers) { ts in
                     NavigationLink(destination: RunTime(allTimes: ts)) {
                         HStack {
                             Text(ts.name).padding()
@@ -38,10 +38,9 @@ struct ContentView: View {
                             Text("run")
                         }
                     }.padding()
-                }*/
+                }
                 Button("reload") {
-                    //allTimers = load("timers.json")
-                    load(TimeStore(), filename: "timers.json")
+                    allTimers = load(filename: "timers.json")
                 }
                 Spacer()
             }

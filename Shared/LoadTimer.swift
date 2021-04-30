@@ -8,29 +8,7 @@
 import Foundation
 
 
-func load<T: Decodable>(_ : T, filename: String) {
-
-    /*let data: Data
-
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-    else {
-        fatalError("Couldn't find \(filename) in main bundle.")
-    }
-    print(file)
-
-    do {
-        data = try Data(contentsOf: file)
-    } catch {
-        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
-    }
-
-
-    do {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    } catch {
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
-    }*/
+func load(filename: String)-> [TimeStore] {
     let data: String
     let data2: Data
     do {
@@ -41,13 +19,10 @@ func load<T: Decodable>(_ : T, filename: String) {
         data = try String(contentsOf: path)
         print(data)
         let decoder = JSONDecoder()
-        print(try decoder.decode(T.self, from: data2))
-        /*print(String(data))
-        let decoder = JSONDecoder()
-        var x = try decoder.decode(TimeStore.self, from: data)
-        print(x)*/
+        return try decoder.decode([TimeStore].self, from: data2)
     } catch {
         print(error)
+        return [TimeStore()]
     }
 }
 
