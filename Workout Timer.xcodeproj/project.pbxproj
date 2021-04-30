@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C233D7BD263C5F9300E71E5C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233D7BC263C5F9300E71E5C /* File.swift */; };
+		C233D7BE263C5F9300E71E5C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233D7BC263C5F9300E71E5C /* File.swift */; };
 		C26F64BD263325DC00C786DD /* TimerBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F64BC263325DC00C786DD /* TimerBuild.swift */; };
 		C26F64BE263325DC00C786DD /* TimerBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F64BC263325DC00C786DD /* TimerBuild.swift */; };
 		C26F64D026338A2600C786DD /* TimeCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F64CF26338A2600C786DD /* TimeCreate.swift */; };
@@ -45,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C233D7BC263C5F9300E71E5C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C26F64BC263325DC00C786DD /* TimerBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBuild.swift; sourceTree = "<group>"; };
 		C26F64CF26338A2600C786DD /* TimeCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCreate.swift; sourceTree = "<group>"; };
 		C26F64D6263476D200C786DD /* preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = preview.mp3; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 			children = (
 				C2B4DB88263311D000195B18 /* Workout_TimerApp.swift */,
 				C2B4DB89263311D000195B18 /* ContentView.swift */,
+				C233D7BC263C5F9300E71E5C /* File.swift */,
 				C26F64BC263325DC00C786DD /* TimerBuild.swift */,
 				C26F64E426370D9200C786DD /* LoadTimer.swift */,
 				C26F64DD2634BFEB00C786DD /* RunTime.swift */,
@@ -332,6 +336,7 @@
 			files = (
 				C2B4DBB3263311D100195B18 /* ContentView.swift in Sources */,
 				C2B4DBB1263311D100195B18 /* Workout_TimerApp.swift in Sources */,
+				C233D7BD263C5F9300E71E5C /* File.swift in Sources */,
 				C26F64D026338A2600C786DD /* TimeCreate.swift in Sources */,
 				C26F64DE2634BFEB00C786DD /* RunTime.swift in Sources */,
 				C26F64BD263325DC00C786DD /* TimerBuild.swift in Sources */,
@@ -345,6 +350,7 @@
 			files = (
 				C2B4DBB4263311D100195B18 /* ContentView.swift in Sources */,
 				C2B4DBB2263311D100195B18 /* Workout_TimerApp.swift in Sources */,
+				C233D7BE263C5F9300E71E5C /* File.swift in Sources */,
 				C26F64D126338A2600C786DD /* TimeCreate.swift in Sources */,
 				C26F64DF2634BFEB00C786DD /* RunTime.swift in Sources */,
 				C26F64BE263325DC00C786DD /* TimerBuild.swift in Sources */,

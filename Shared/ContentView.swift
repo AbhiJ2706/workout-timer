@@ -24,7 +24,7 @@ struct ContentView: View {
                         .padding()
                     Spacer()
                     NavigationLink(
-                        destination: TimerBuild(alltimers : allTimers),
+                        destination: TimerBuild(alltimers : $allTimers),
                         isActive: $GoToTime,
                         label: {
                             Image(systemName: "plus")

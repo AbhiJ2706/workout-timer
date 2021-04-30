@@ -46,7 +46,7 @@ struct TimerBuild: View {
     @State var id : Int = 0
     @State var Items : [Times] = []
     @State var GoToTime : Bool = false
-    @State var alltimers : [TimeStore]
+    @Binding var alltimers : [TimeStore]
     
     func submit() -> Void {
         let t : Times = Times(Hours : Hours.amt, Minutes : Minutes.amt, Seconds : Seconds.amt, id : id)
@@ -78,18 +78,18 @@ struct TimerBuild: View {
                     alltimers.append(time)
                     save(filename : "timers.json", t : alltimers)
                 }
-                Spacer()
-                List(Items, id : \.id) { Times in
-                    TimeView(t : Times)
-                }
             }
-            Spacer()
+            List(Items, id : \.id) { Times in
+                TimeView(t : Times)
+            }.padding(.all).frame(width: 390, height: 30+50*CGFloat(Items.count < 6 ? Items.count : 6)).accentColor(.clear)
         }
     }
 }
 
-struct TimerBuild_Previews: PreviewProvider {
+/*struct TimerBuild_Previews: PreviewProvider {
+    @State var x : [TimeStore] = []
+    
     static var previews: some View {
-        TimerBuild(alltimers: [])
+        TimerBuild(alltimers: Binding<[TimeStore]>($x)!)
     }
-}
+}*/
