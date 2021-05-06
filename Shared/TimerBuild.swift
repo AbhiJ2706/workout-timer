@@ -9,6 +9,20 @@ import SwiftUI
 import AVFoundation
 
 
+
+func timePrettyFormat(time: Int) -> String {
+    let seconds : Int = Int(time) % 60
+    var minutes : Int = (Int(time) - seconds) / 60
+    if minutes >= 60 {
+        while (minutes >= 60 ) {
+            minutes -= 60
+        }
+    }
+    let hours : Int = Int(time) / 3600
+    return String(hours) + ":" + String(format: "%02d", minutes) + ":" + String(format: "%02d", seconds)
+}
+
+
 struct Times : Codable {
     var Hours : Int
     var Minutes : Int
@@ -22,11 +36,7 @@ struct TimeView : View {
     @State var t : Times
     
     var body : some View {
-        HStack {
-            Text(String(t.Hours) + " Hours, ")
-            Text(String(t.Minutes) + " Minutes, ")
-            Text(String(t.Seconds) + " Seconds")
-        }
+        Text(timePrettyFormat(time: 3600 * t.Hours + 60 * t.Minutes + t.Seconds))
     }
 }
 
@@ -56,7 +66,7 @@ struct TimerBuild: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 0) {
             Form {
                 TextField("Name", text : $time.name)
                 TextField("Hours", text : $Hours.value)
@@ -79,9 +89,11 @@ struct TimerBuild: View {
                     save(filename : "timers.json", t : alltimers)
                 }
             }
-            List(Items, id : \.id) { Times in
-                TimeView(t : Times)
-            }.padding(.all).frame(width: 390, height: 30+50*CGFloat(Items.count < 6 ? Items.count : 6)).accentColor(.clear)
+            Form {
+                List(Items, id : \.id) { Times in
+                    TimeView(t : Times)
+                }
+            }.frame(alignment: .top)
         }
     }
 }

@@ -8,6 +8,21 @@
 import SwiftUI
 import AVFoundation
 
+
+func timePrettyFormat(time: Float) -> String {
+    let seconds : Int = Int(time) % 60
+    var minutes : Int = (Int(time) - seconds) / 60
+    if minutes >= 60 {
+        while (minutes >= 60 ) {
+            minutes -= 60
+        }
+    }
+    let hours : Int = Int(time) / 3600
+    let part : Int = Int(time.truncatingRemainder(dividingBy: 1) * 10)
+    return String(hours) + ":" + String(format: "%02d", minutes) + ":" + String(format: "%02d", seconds) + "." + String(format: "%01d", part)
+}
+
+
 struct RunTime: View {
     @State var allTimes : TimeStore
     @State var benchmarks : [Int] = []
@@ -55,7 +70,7 @@ struct RunTime: View {
     var body: some View {
         VStack {
             Text(allTimes.name)
-            Text(NSDecimalNumber(decimal: cTime).stringValue).padding()
+            Text(timePrettyFormat(time : NSDecimalNumber(decimal: cTime).floatValue)).padding().font(.largeTitle)
             Button(action: {
                 calcSum()
                 true_run(i : 0, ind : 0)

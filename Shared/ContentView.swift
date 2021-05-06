@@ -37,10 +37,7 @@ struct ContentView: View {
                             Spacer()
                             Text("run")
                         }
-                    }.padding()
-                }
-                Button("reload") {
-                    allTimers = load(filename: "timers.json")
+                    }
                 }
                 Spacer()
             }
