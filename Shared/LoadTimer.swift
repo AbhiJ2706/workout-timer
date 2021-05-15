@@ -21,8 +21,20 @@ func load(filename: String)-> [TimeStore] {
         let decoder = JSONDecoder()
         return try decoder.decode([TimeStore].self, from: data2)
     } catch {
-        print(error)
-        return [TimeStore()]
+        do {
+            print(error)
+            let path = FileManager.default.urls(for: .documentDirectory,
+                                                in: .userDomainMask)[0].appendingPathComponent(filename)
+            print(path)
+            let data2 = try Data(contentsOf: path)
+            let data = try String(contentsOf: path)
+            print(data)
+            let decoder = JSONDecoder()
+            return try [decoder.decode(TimeStore.self, from: data2)]
+        } catch {
+            print(error)
+            return [TimeStore()]
+        }
     }
 }
 

@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Workout_TimerApp: App {
+    @State var temp = true;
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(nav: $temp)
         }
     }
 }
