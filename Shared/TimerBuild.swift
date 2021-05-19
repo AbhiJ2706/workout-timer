@@ -34,9 +34,27 @@ struct Times : Codable {
 struct TimeView : View {
     
     @State var t : Times
+    @Binding var times : [Times]
+    @Binding var gid : Int
+    
+    func del() {
+        for i in 0...times.count - 1 {
+            if i > t.id {
+                times[i].id -= 1
+            }
+        }
+        times.remove(at: t.id)
+        gid -= 1
+    }
     
     var body : some View {
-        Text(timePrettyFormat(time: 3600 * t.Hours + 60 * t.Minutes + t.Seconds))
+        HStack {
+            Text(timePrettyFormat(time: 3600 * t.Hours + 60 * t.Minutes + t.Seconds))
+            Spacer()
+            Button(action: del) {
+                Image(systemName: "trash").foregroundColor(.red)
+            }
+        }
     }
 }
 
@@ -57,9 +75,16 @@ struct TimerBuild: View {
     @State var Items : [Times] = []
     @State var GoToTime : Bool = false
     @Binding var alltimers : [TimeStore]
+    @State var p : CGFloat = 0
     
     func submit() -> Void {
-        let t : Times = Times(Hours : Hours.amt, Minutes : Minutes.amt, Seconds : Seconds.amt, id : id)
+        let totTime : Int = Hours.amt * 3600 + Minutes.amt * 60 + Seconds.amt
+        var t : Times
+        if totTime >= 360000 {
+            t = Times(Hours : 99, Minutes : 59, Seconds : 59, id : id)
+        } else {
+            t = Times(Hours : Hours.amt, Minutes : Minutes.amt, Seconds : Seconds.amt, id : id)
+        }
         time.times.append(t)
         Items.append(t)
         id += 1
@@ -79,19 +104,32 @@ struct TimerBuild: View {
                     submit()
                 }
                 NavigationLink(
-                    destination: RunTime(allTimes : time),
+                    destination: RunTime(allTimes : time, progressValue: $p),
                     isActive: $GoToTime,
                     label: {
-                        Text("run")
+                        Text("Run").foregroundColor(.blue)
                     })
                 Button("Save") {
-                    alltimers.append(time)
+                    var found : Bool = false
+                    if alltimers.count > 0 {
+                        for i in 0...alltimers.count - 1 {
+                            if alltimers[i].name == time.name {
+                                alltimers[i] = time
+                                found = true
+                            }
+                        }
+                        if !found {
+                            alltimers.append(time)
+                        }
+                    } else {
+                        alltimers.append(time)
+                    }
                     save(filename : "timers.json", t : alltimers)
                 }
             }
             Form {
                 List(Items, id : \.id) { Times in
-                    TimeView(t : Times)
+                    TimeView(t : Times, times: $Items, gid: $id)
                 }
             }.frame(alignment: .top)
         }

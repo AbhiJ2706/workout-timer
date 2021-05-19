@@ -50,8 +50,6 @@ func save(filename: String, t : [TimeStore]) {
             
             let path = FileManager.default.urls(for: .documentDirectory,
                                                 in: .userDomainMask)[0].appendingPathComponent(filename)
-            print(t[0].times)
-            
             try? json!.write(to: path)
         } else {
             let x : [TimeStore] = t
@@ -61,8 +59,6 @@ func save(filename: String, t : [TimeStore]) {
             
             let path = FileManager.default.urls(for: .documentDirectory,
                                                 in: .userDomainMask)[0].appendingPathComponent(filename)
-            print(t[0].times)
-            
             try? json!.write(to: path)
         }
         

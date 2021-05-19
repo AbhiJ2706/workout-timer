@@ -17,6 +17,7 @@ struct ContentView: View {
     @State var allTimers = load(filename: "timers.json")
     @State var showAlert = false;
     @Binding var nav : Bool;
+    @State var p : CGFloat = 0
     
     func switchNav(){
         nav = !nav;
@@ -30,7 +31,7 @@ struct ContentView: View {
             VStack {
                 HStack {
                     Text("All timers")
-                        .padding()
+                        .padding().font(.title)
                     Spacer()
                     Button(action: switchNav) {
                         Image(systemName: "minus")
@@ -48,7 +49,7 @@ struct ContentView: View {
                         Spacer()
                         if !nav {
                             Button(action: delete) {
-                                Image(systemName: "trash").foregroundColor(.red)
+                                Image(systemName: "trash").foregroundColor(.red).padding()
                             }.alert(isPresented: $showAlert) {
                                 Alert(title: Text("Delete?"),
                                       message: Text("Are you sure you want to delete?"),
@@ -66,7 +67,7 @@ struct ContentView: View {
                                       secondaryButton: .cancel())
                             }
                         } else {
-                            NavigationLink(destination: RunTime(allTimes: ts)) {
+                            NavigationLink(destination: RunTime(allTimes: ts, progressValue: $p)) {
                                 Spacer()
                                 Text("Run")
                             }.id(UUID())
