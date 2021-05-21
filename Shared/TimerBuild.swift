@@ -60,7 +60,7 @@ struct TimeView : View {
 
 
 class TimeStore : ObservableObject, Codable, Identifiable {
-    var name : String = ""
+    var name : String = "timer_" + String(Int.random(in: 1..<100000000))
     var times : [Times] = []
 }
 

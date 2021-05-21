@@ -40,10 +40,6 @@ struct RunTime: View {
         }
     }
     
-    func doPause() {
-        pause = !pause
-    }
-    
     func true_run(i : Decimal, ind : Int) {
         if ind >= benchmarks.count || i > Decimal(totTime) {
             return
@@ -86,7 +82,7 @@ struct RunTime: View {
                     ZStack {
                         Button(action: {
                             calcSum()
-                            true_run(i : 0, ind : 0)
+                            true_run(i: 0, ind: 0)
                         }) {
                             Text("Run").font(.largeTitle)
                                 .frame(width: 250, height: 250)
@@ -106,9 +102,6 @@ struct RunTime: View {
                     Spacer()
                 }
             }
-            Button(action: doPause){
-                Text("pause")
-            }
         }
     }
 }
@@ -122,3 +115,30 @@ struct RunTime: View {
         RunTime(allTimes: TimeStore(), progressValue: $progress)
     }
 }*/
+
+/*
+ let url = Bundle.main.url(forResource : "preview", withExtension: "mp3")!
+ do {
+     var new_ind : Int = ind
+     if ind >= benchmarks.count || i > Decimal(totTime) {
+         timer.invalidate()
+     }
+     if i * 10 == Decimal(benchmarks[ind] * 10) {
+         print("Timer fired!" + " \(i)")
+         player = try AVAudioPlayer(contentsOf: url)
+         guard let player = player else { return }
+
+         player.prepareToPlay()
+         player.play()
+         new_ind += 1
+     }
+     var tot_time : Decimal = i
+     if new_ind < benchmarks.count {
+         tot_time += 0.1
+     }
+     cTime = tot_time
+     progressValue = CGFloat(NSDecimalNumber(decimal: tot_time).floatValue / Float(totTime))
+ } catch let error as NSError {
+     print(error.description)
+ }
+ */
