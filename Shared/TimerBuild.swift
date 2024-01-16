@@ -75,7 +75,9 @@ struct TimerBuild: View {
     @State var Items : [Times] = []
     @State var GoToTime : Bool = false
     @Binding var alltimers : [TimeStore]
-    @State var p : CGFloat = 0
+    @Binding var timerRunning: Bool
+    @Binding var currentTimerProgress: CGFloat
+    @Binding var currentTimerTime: Decimal
     
     func submit() -> Void {
         let totTime : Int = Hours.amt * 3600 + Minutes.amt * 60 + Seconds.amt
@@ -104,7 +106,10 @@ struct TimerBuild: View {
                     submit()
                 }
                 NavigationLink(
-                    destination: RunTime(allTimes : time, progressValue: $p),
+                    destination: RunTime(allTimes : time,
+                                         cTime: $currentTimerTime,
+                                         progressValue: $currentTimerProgress,
+                                         timerRunning: $timerRunning),
                     isActive: $GoToTime,
                     label: {
                         Text("Run").foregroundColor(.blue)

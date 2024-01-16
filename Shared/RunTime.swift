@@ -27,10 +27,14 @@ struct RunTime: View {
     @State var allTimes : TimeStore
     @State var benchmarks : [Int] = []
     @State var totTime : Int = 0
-    @State var cTime : Decimal = 0
+    @Binding var cTime : Decimal
     @State var player : AVAudioPlayer?
     @Binding var progressValue : CGFloat
+    @Binding var timerRunning : Bool
+    @State var currentTimerRunningName: String
     @State var pause : Bool = false
+    let timerInterval : Double = 0.1
+        
     
     func calcSum() {
         progressValue = 0
@@ -41,32 +45,39 @@ struct RunTime: View {
     }
     
     func true_run(i : Decimal, ind : Int) {
-        if ind >= benchmarks.count || i > Decimal(totTime) {
+        if timerRunning {
             return
         }
-        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { timer in
+        var index_counter : Int = ind
+        var start_time : Decimal = i
+        
+        let inverse_timer_interval : Int = Int(1 / timerInterval)
+        _ = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true) { timer in
+            if index_counter >= benchmarks.count || NSDecimalNumber(decimal: start_time).doubleValue > Double(totTime) {
+                timer.invalidate()
+                timerRunning = false
+                benchmarks = []
+                return
+            }
+            timerRunning = true
             let url = Bundle.main.url(forResource : "preview", withExtension: "mp3")!
             do {
-                var new_ind : Int = ind
                 while pause {
                     continue
                 }
-                if i * 10 == Decimal(benchmarks[ind] * 10) {
-                    print("Timer fired!" + " \(i)")
+                if start_time * Decimal(inverse_timer_interval) == Decimal(benchmarks[index_counter] * inverse_timer_interval) {
                     player = try AVAudioPlayer(contentsOf: url)
                     guard let player = player else { return }
-
+                    print("Timer fired!" + " \(start_time)")
                     player.prepareToPlay()
                     player.play()
-                    new_ind += 1
+                    index_counter += 1
                 }
-                var tot_time : Decimal = i
-                if new_ind < benchmarks.count {
-                    tot_time += 0.1
+                if index_counter < benchmarks.count {
+                    start_time += Decimal(timerInterval)
                 }
-                cTime = tot_time
-                progressValue = CGFloat(NSDecimalNumber(decimal: tot_time).floatValue / Float(totTime))
-                true_run(i : tot_time, ind : new_ind)
+                cTime = start_time
+                progressValue = CGFloat(NSDecimalNumber(decimal: start_time).floatValue / Float(totTime))
             } catch let error as NSError {
                 print(error.description)
             }
@@ -82,13 +93,26 @@ struct RunTime: View {
                     ZStack {
                         Button(action: {
                             calcSum()
-                            true_run(i: 0, ind: 0)
+                            if pause {
+                                true_run(i: 0, ind: 0)
+                                pause = false
+                            } else {
+                                pause = true
+                            }
                         }) {
-                            Text("Run").font(.largeTitle)
-                                .frame(width: 250, height: 250)
-                                .foregroundColor(Color.black)
-                                .background(Color.white)
-                                .clipShape(Circle()).padding()
+                            if pause {
+                                Text("Run").font(.largeTitle)
+                                    .frame(width: 250, height: 250)
+                                    .foregroundColor(Color.black)
+                                    .background(Color.white)
+                                    .clipShape(Circle()).padding()
+                            } else {
+                                Text("Pause").font(.largeTitle)
+                                    .frame(width: 250, height: 250)
+                                    .foregroundColor(Color.black)
+                                    .background(Color.white)
+                                    .clipShape(Circle()).padding()
+                            }
                         }
                         Circle()
                             .stroke(lineWidth: 20.0)

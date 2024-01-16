@@ -17,7 +17,9 @@ struct ContentView: View {
     @State var allTimers = load(filename: "timers.json")
     @State var showAlert = false;
     @Binding var nav : Bool;
-    @State var p : CGFloat = 0
+    @State var currentTimerProgress : CGFloat = 0
+    @State var timerRunning: Bool = false
+    @State var currentTimerTime : Decimal = 0
     
     func switchNav(){
         nav = !nav;
@@ -37,7 +39,10 @@ struct ContentView: View {
                         Image(systemName: "minus")
                     }
                     NavigationLink(
-                        destination: TimerBuild(alltimers : $allTimers),
+                        destination: TimerBuild(alltimers : $allTimers,
+                                                timerRunning: $timerRunning,
+                                                currentTimerProgress: $currentTimerProgress,
+                                                currentTimerTime: $currentTimerTime),
                         isActive: $GoToTime,
                         label: {
                             Image(systemName: "plus")
@@ -67,7 +72,10 @@ struct ContentView: View {
                                       secondaryButton: .cancel())
                             }
                         } else {
-                            NavigationLink(destination: RunTime(allTimes: ts, progressValue: $p)) {
+                            NavigationLink(destination: RunTime(allTimes: ts,
+                                                                cTime: $currentTimerTime,
+                                                                progressValue: $currentTimerProgress,
+                                                                timerRunning: $timerRunning)) {
                                 Spacer()
                                 Text("Run")
                             }.id(UUID())
